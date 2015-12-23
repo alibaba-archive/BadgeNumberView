@@ -14,25 +14,32 @@ public class BadgeView: UILabel {
             setNeedsDisplay()
         }
     }
-    public var badgeBackgroundColor: UIColor? {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
     public var maxDigit: UInt = 3 {
         didSet {
             setNeedsDisplay()
         }
     }
-    public var badge: (number: Int, font: UIFont, textColor: UIColor)? {
-        didSet {
-            if let badge = badge {
-                let badgeFrame = attributedBadgeNumber(number: badge.number, font: badge.font, textColor: badge.textColor).frame
-                frame.size.height = badgeFrame.height + 10
-                frame.size.width = badgeFrame.width + 10
+
+    private var badgeBackgroundColor: UIColor?
+    private var badge: (number: Int, font: UIFont, textColor: UIColor)?
+
+    public func setBadge(number number: Int, font: UIFont, textColor: UIColor, backgroundColor: UIColor, height: CGFloat? = nil) {
+        let badgeFrame = attributedBadgeNumber(number: number, font: font, textColor: textColor).frame
+        let height = height ?? badgeFrame.height
+        let width = height
+        for constraint in constraints {
+            if constraint.firstAttribute == .Height || constraint.firstAttribute == .Width {
+                removeConstraint(constraint)
             }
-            setNeedsDisplay()
         }
+
+        addConstraint(NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: .None, attribute: .NotAnAttribute, multiplier: 1, constant: height))
+        addConstraint(NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: .None, attribute: .NotAnAttribute, multiplier: 1, constant: width))
+        layoutIfNeeded()
+
+        badgeBackgroundColor = backgroundColor
+        badge = (number, font, textColor)
+        setNeedsDisplay()
     }
 
     override public func drawRect(rect: CGRect) {
@@ -53,9 +60,9 @@ public class BadgeView: UILabel {
     }
 
     private func drawBadgeNumber(number number: Int, font: UIFont, textColor: UIColor) {
-        let attributedNumber = attributedBadgeNumber(number: number, font: font, textColor: textColor)
-        var attributes = attributedNumber.attributes
-        let attributedBadgeNumberFrame = attributedNumber.frame
+        let attributedBadge = attributedBadgeNumber(number: number, font: font, textColor: textColor)
+        var attributes = attributedBadge.attributes
+        let attributedBadgeNumberFrame = attributedBadge.frame
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center

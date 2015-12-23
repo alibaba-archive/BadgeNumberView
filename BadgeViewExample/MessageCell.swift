@@ -18,8 +18,7 @@ class MessageCell: UITableViewCell {
         super.awakeFromNib()
 
 //        badgeView.cornerRadius = 5
-        badgeView.badgeBackgroundColor = UIColor.redColor()
-        badgeView.badge = (67, UIFont.systemFontOfSize(18), UIColor.whiteColor())
+        badgeView.setBadge(number: 6, font: UIFont.systemFontOfSize(14), textColor: UIColor.whiteColor(), backgroundColor: UIColor.redColor(), height: 18)
     }
 
 }
