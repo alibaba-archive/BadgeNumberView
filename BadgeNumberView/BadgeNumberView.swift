@@ -55,6 +55,10 @@ public class BadgeNumberView: UIView {
         }
     }
 
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     // MARK: - Size related
     private func sizeForBadge(text: String, font: UIFont, textColor: UIColor) -> CGSize {
         let fitHeight = ceil(font.lineHeight)
