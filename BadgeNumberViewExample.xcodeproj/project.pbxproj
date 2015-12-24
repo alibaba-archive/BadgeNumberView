@@ -12,8 +12,23 @@
 		D364A9A61C2AAF59001D6312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364A9A51C2AAF59001D6312 /* Assets.xcassets */; };
 		D364A9BD1C2AB706001D6312 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A9BC1C2AB706001D6312 /* MessageCell.swift */; };
 		D364A9C61C2B8F20001D6312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364A9C41C2B8F20001D6312 /* Main.storyboard */; };
-		D364A9C81C2B8F3F001D6312 /* BadgeNumberView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C71C2B8F3F001D6312 /* BadgeNumberView.framework */; };
+		D364A9CA1C2BF15D001D6312 /* BadgeNumberView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */; };
+		D364A9CB1C2BF15D001D6312 /* BadgeNumberView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D364A9CC1C2BF15D001D6312 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D364A9CB1C2BF15D001D6312 /* BadgeNumberView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D364A99B1C2AAF59001D6312 /* BadgeNumberViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeNumberViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,7 +38,7 @@
 		D364A9AA1C2AAF59001D6312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364A9BC1C2AB706001D6312 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		D364A9C51C2B8F20001D6312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D364A9C71C2B8F3F001D6312 /* BadgeNumberView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeNumberView.framework; path = "build/Debug-iphoneos/BadgeNumberView.framework"; sourceTree = "<group>"; };
+		D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BadgeNumberView.framework; path = "/Users/hongxin/Library/Developer/Xcode/DerivedData/BadgeNumberView-dgiqothgeazfncejznvevftuadqa/Build/Products/Debug-iphoneos/BadgeNumberView.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D364A9C81C2B8F3F001D6312 /* BadgeNumberView.framework in Frameworks */,
+				D364A9CA1C2BF15D001D6312 /* BadgeNumberView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +56,7 @@
 		D364A9921C2AAF59001D6312 = {
 			isa = PBXGroup;
 			children = (
-				D364A9C71C2B8F3F001D6312 /* BadgeNumberView.framework */,
+				D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */,
 				D364A99D1C2AAF59001D6312 /* BadgeNumberViewExample */,
 				D364A99C1C2AAF59001D6312 /* Products */,
 			);
@@ -78,6 +93,7 @@
 				D364A9971C2AAF59001D6312 /* Sources */,
 				D364A9981C2AAF59001D6312 /* Frameworks */,
 				D364A9991C2AAF59001D6312 /* Resources */,
+				D364A9CC1C2BF15D001D6312 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

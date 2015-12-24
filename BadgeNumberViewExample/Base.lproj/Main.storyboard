@@ -21,20 +21,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGV-5H-kCe" customClass="BadgeNumberView" customModule="BadgeNumberView">
-                                            <rect key="frame" x="559" y="21.5" width="21" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Rw-RAx" customClass="BadgeNumberView" customModule="BadgeNumberView">
+                                            <rect key="frame" x="555" y="19" width="25" height="25"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="IBV-j4-8ro"/>
+                                                <constraint firstAttribute="height" constant="25" id="oZq-Nc-rgL"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="zGV-5H-kCe" firstAttribute="centerY" secondItem="QYV-7a-Szv" secondAttribute="centerY" id="Kq4-rQ-t3H"/>
-                                        <constraint firstAttribute="trailing" secondItem="zGV-5H-kCe" secondAttribute="trailing" constant="20" id="jxu-AE-E8Y"/>
+                                        <constraint firstItem="zFM-Rw-RAx" firstAttribute="centerY" secondItem="QYV-7a-Szv" secondAttribute="centerY" id="TF2-6t-eLa"/>
+                                        <constraint firstAttribute="trailing" secondItem="zFM-Rw-RAx" secondAttribute="trailing" constant="20" id="r80-Qq-hbj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="badgeNumberView" destination="zGV-5H-kCe" id="ZUI-Kh-3Oq"/>
+                                    <outlet property="badgeNumberView" destination="zFM-Rw-RAx" id="OQz-lh-QWb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -17,8 +17,13 @@ class MessageCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-//        badgeNumberView.cornerRadius = 5
-        badgeNumberView.setBadge(number: 6, font: UIFont.systemFontOfSize(14), textColor: UIColor.whiteColor(), backgroundColor: UIColor.redColor(), height: 18)
+        badgeNumberView.hidesWhenZero = true
+        badgeNumberView.autoSize = false
+//        badgeNumberView.autoSizeOffset = (3, 2)
     }
 
+    func fill(number number: Int) {
+        badgeNumberView.setBadge(text: String(number), font: UIFont.systemFontOfSize(13), textColor: UIColor.whiteColor(), backgroundColor: UIColor(red: 255 / 255, green: 59 / 255, blue: 48 / 255, alpha: 1))
+        badgeNumberView.setBadgeSize(CGSizeMake(18 + CGFloat((String(number).characters.count - 1) * 8), 18))
+    }
 }
