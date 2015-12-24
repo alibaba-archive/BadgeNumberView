@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BadgeViewExample.xcscheme</key>
+		<key>BadgeNumberView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D364A99A1C2AAF59001D6312</key>
+		<key>D364A9861C2AAED3001D6312</key>
 		<dict>
 			<key>primary</key>
 			<true/>

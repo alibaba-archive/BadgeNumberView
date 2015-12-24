@@ -8,20 +8,20 @@
         <!--Example View Controller-->
         <scene sceneID="dmf-Rv-ZjV">
             <objects>
-                <tableViewController id="86X-7E-3C1" customClass="ExampleViewController" customModule="BadgeViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="86X-7E-3C1" customClass="ExampleViewController" customModule="BadgeNumberViewExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="65" sectionHeaderHeight="18" sectionFooterHeight="18" id="KlC-fT-l9N">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="65" id="NDN-Hf-YZf" customClass="MessageCell" customModule="BadgeViewExample" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="65" id="NDN-Hf-YZf" customClass="MessageCell" customModule="BadgeNumberViewExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="113.5" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDN-Hf-YZf" id="QYV-7a-Szv">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGV-5H-kCe" customClass="BadgeView" customModule="BadgeView">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGV-5H-kCe" customClass="BadgeNumberView" customModule="BadgeNumberView">
                                             <rect key="frame" x="559" y="21.5" width="21" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -34,7 +34,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="badgeView" destination="zGV-5H-kCe" id="l5x-lE-iYd"/>
+                                    <outlet property="badgeNumberView" destination="zGV-5H-kCe" id="ZUI-Kh-3Oq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

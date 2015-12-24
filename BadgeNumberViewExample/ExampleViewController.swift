@@ -1,6 +1,6 @@
 //
 //  ExampleViewController.swift
-//  BadgeViewExample
+//  BadgeNumberViewExample
 //
 //  Created by 洪鑫 on 15/12/23.
 //  Copyright © 2015年 Teambition. All rights reserved.
@@ -18,7 +18,7 @@ class ExampleViewController: UITableViewController {
 
     // MARK: - Helper
     private func setupUI() {
-        navigationItem.title = "BadgeView Example"
+        navigationItem.title = "BadgeNumberView Example"
     }
 
     // MARK: - TableView data source and delegate
@@ -37,6 +37,10 @@ class ExampleViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MessageCellID, forIndexPath: indexPath)
         return cell
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 

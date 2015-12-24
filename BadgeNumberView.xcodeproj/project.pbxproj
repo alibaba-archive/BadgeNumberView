@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D364A9B81C2AB179001D6312 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A9B71C2AB179001D6312 /* BadgeView.swift */; };
+		D364A9C31C2B8E81001D6312 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A9C21C2B8E81001D6312 /* BadgeNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D364A9871C2AAED3001D6312 /* BadgeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BadgeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D364A9B71C2AB179001D6312 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
-		D364A9BA1C2AB19C001D6312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D364A9871C2AAED3001D6312 /* BadgeNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BadgeNumberView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D364A9BA1C2AB19C001D6312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = Info.plist; path = "BadgeNumberView/Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		D364A9C21C2B8E81001D6312 /* BadgeNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +30,7 @@
 		D364A97D1C2AAED3001D6312 = {
 			isa = PBXGroup;
 			children = (
-				D364A9891C2AAED3001D6312 /* BadgeView */,
+				D364A9891C2AAED3001D6312 /* BadgeNumberView */,
 				D364A9B91C2AB18B001D6312 /* Supporting Files */,
 				D364A9881C2AAED3001D6312 /* Products */,
 			);
@@ -39,17 +39,17 @@
 		D364A9881C2AAED3001D6312 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D364A9871C2AAED3001D6312 /* BadgeView.framework */,
+				D364A9871C2AAED3001D6312 /* BadgeNumberView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D364A9891C2AAED3001D6312 /* BadgeView */ = {
+		D364A9891C2AAED3001D6312 /* BadgeNumberView */ = {
 			isa = PBXGroup;
 			children = (
-				D364A9B71C2AB179001D6312 /* BadgeView.swift */,
+				D364A9C21C2B8E81001D6312 /* BadgeNumberView.swift */,
 			);
-			path = BadgeView;
+			path = BadgeNumberView;
 			sourceTree = "<group>";
 		};
 		D364A9B91C2AB18B001D6312 /* Supporting Files */ = {
@@ -74,9 +74,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D364A9861C2AAED3001D6312 /* BadgeView */ = {
+		D364A9861C2AAED3001D6312 /* BadgeNumberView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D364A98F1C2AAED3001D6312 /* Build configuration list for PBXNativeTarget "BadgeView" */;
+			buildConfigurationList = D364A98F1C2AAED3001D6312 /* Build configuration list for PBXNativeTarget "BadgeNumberView" */;
 			buildPhases = (
 				D364A9821C2AAED3001D6312 /* Sources */,
 				D364A9831C2AAED3001D6312 /* Frameworks */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = BadgeView;
+			name = BadgeNumberView;
 			productName = BadgeView;
-			productReference = D364A9871C2AAED3001D6312 /* BadgeView.framework */;
+			productReference = D364A9871C2AAED3001D6312 /* BadgeNumberView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D364A9811C2AAED3001D6312 /* Build configuration list for PBXProject "BadgeView" */;
+			buildConfigurationList = D364A9811C2AAED3001D6312 /* Build configuration list for PBXProject "BadgeNumberView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D364A9861C2AAED3001D6312 /* BadgeView */,
+				D364A9861C2AAED3001D6312 /* BadgeNumberView */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D364A9B81C2AB179001D6312 /* BadgeView.swift in Sources */,
+				D364A9C31C2B8E81001D6312 /* BadgeNumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,11 +242,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/BadgeView/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BadgeNumberView/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeNumberView;
+				PRODUCT_NAME = BadgeNumberView;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -260,11 +260,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/BadgeView/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BadgeNumberView/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeNumberView;
+				PRODUCT_NAME = BadgeNumberView;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -272,7 +272,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D364A9811C2AAED3001D6312 /* Build configuration list for PBXProject "BadgeView" */ = {
+		D364A9811C2AAED3001D6312 /* Build configuration list for PBXProject "BadgeNumberView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D364A98D1C2AAED3001D6312 /* Debug */,
@@ -281,7 +281,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D364A98F1C2AAED3001D6312 /* Build configuration list for PBXNativeTarget "BadgeView" */ = {
+		D364A98F1C2AAED3001D6312 /* Build configuration list for PBXNativeTarget "BadgeNumberView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D364A9901C2AAED3001D6312 /* Debug */,

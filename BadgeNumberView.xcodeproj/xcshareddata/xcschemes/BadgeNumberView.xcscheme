@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D364A99A1C2AAF59001D6312"
-               BuildableName = "BadgeViewExample.app"
-               BlueprintName = "BadgeViewExample"
-               ReferencedContainer = "container:BadgeViewExample.xcodeproj">
+               BlueprintIdentifier = "D364A9861C2AAED3001D6312"
+               BuildableName = "BadgeNumberView.framework"
+               BlueprintName = "BadgeNumberView"
+               ReferencedContainer = "container:BadgeNumberView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D364A99A1C2AAF59001D6312"
-            BuildableName = "BadgeViewExample.app"
-            BlueprintName = "BadgeViewExample"
-            ReferencedContainer = "container:BadgeViewExample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D364A99A1C2AAF59001D6312"
-            BuildableName = "BadgeViewExample.app"
-            BlueprintName = "BadgeViewExample"
-            ReferencedContainer = "container:BadgeViewExample.xcodeproj">
+            BlueprintIdentifier = "D364A9861C2AAED3001D6312"
+            BuildableName = "BadgeNumberView.framework"
+            BlueprintName = "BadgeNumberView"
+            ReferencedContainer = "container:BadgeNumberView.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D364A99A1C2AAF59001D6312"
-            BuildableName = "BadgeViewExample.app"
-            BlueprintName = "BadgeViewExample"
-            ReferencedContainer = "container:BadgeViewExample.xcodeproj">
+            BlueprintIdentifier = "D364A9861C2AAED3001D6312"
+            BuildableName = "BadgeNumberView.framework"
+            BlueprintName = "BadgeNumberView"
+            ReferencedContainer = "container:BadgeNumberView.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

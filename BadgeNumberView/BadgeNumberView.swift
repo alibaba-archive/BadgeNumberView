@@ -1,6 +1,6 @@
 //
-//  BadgeView.swift
-//  BadgeView
+//  BadgeNumberView.swift
+//  BadgeNumberView
 //
 //  Created by 洪鑫 on 15/12/23.
 //  Copyright © 2015年 Teambition. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BadgeView: UILabel {
+public class BadgeNumberView: UILabel {
     public var cornerRadius: CGFloat? {
         didSet {
             setNeedsDisplay()

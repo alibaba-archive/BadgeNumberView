@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BadgeView.xcscheme_^#shared#^_</key>
+		<key>BadgeNumberViewExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D364A9861C2AAED3001D6312</key>
+		<key>D364A99A1C2AAF59001D6312</key>
 		<dict>
 			<key>primary</key>
 			<true/>

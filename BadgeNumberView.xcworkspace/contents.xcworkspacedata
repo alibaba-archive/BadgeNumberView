@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:BadgeView.xcodeproj">
+      location = "group:BadgeNumberView.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BadgeViewExample.xcodeproj">
+      location = "group:BadgeNumberViewExample.xcodeproj">
    </FileRef>
 </Workspace>

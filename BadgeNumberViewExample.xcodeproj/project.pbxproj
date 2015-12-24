@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		D364A99F1C2AAF59001D6312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A99E1C2AAF59001D6312 /* AppDelegate.swift */; };
 		D364A9A11C2AAF59001D6312 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A9A01C2AAF59001D6312 /* ExampleViewController.swift */; };
-		D364A9A41C2AAF59001D6312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364A9A21C2AAF59001D6312 /* Main.storyboard */; };
 		D364A9A61C2AAF59001D6312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364A9A51C2AAF59001D6312 /* Assets.xcassets */; };
 		D364A9BD1C2AB706001D6312 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A9BC1C2AB706001D6312 /* MessageCell.swift */; };
-		D364A9C11C2AB96F001D6312 /* BadgeView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C01C2AB96F001D6312 /* BadgeView.framework */; };
+		D364A9C61C2B8F20001D6312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364A9C41C2B8F20001D6312 /* Main.storyboard */; };
+		D364A9C81C2B8F3F001D6312 /* BadgeNumberView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C71C2B8F3F001D6312 /* BadgeNumberView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D364A99B1C2AAF59001D6312 /* BadgeViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D364A99B1C2AAF59001D6312 /* BadgeNumberViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeNumberViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364A99E1C2AAF59001D6312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D364A9A01C2AAF59001D6312 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		D364A9A31C2AAF59001D6312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D364A9A51C2AAF59001D6312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D364A9AA1C2AAF59001D6312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364A9BC1C2AB706001D6312 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		D364A9C01C2AB96F001D6312 /* BadgeView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeView.framework; path = "build/Debug-iphoneos/BadgeView.framework"; sourceTree = "<group>"; };
+		D364A9C51C2B8F20001D6312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D364A9C71C2B8F3F001D6312 /* BadgeNumberView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeNumberView.framework; path = "build/Debug-iphoneos/BadgeNumberView.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D364A9C11C2AB96F001D6312 /* BadgeView.framework in Frameworks */,
+				D364A9C81C2B8F3F001D6312 /* BadgeNumberView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +41,8 @@
 		D364A9921C2AAF59001D6312 = {
 			isa = PBXGroup;
 			children = (
-				D364A9C01C2AB96F001D6312 /* BadgeView.framework */,
-				D364A99D1C2AAF59001D6312 /* BadgeViewExample */,
+				D364A9C71C2B8F3F001D6312 /* BadgeNumberView.framework */,
+				D364A99D1C2AAF59001D6312 /* BadgeNumberViewExample */,
 				D364A99C1C2AAF59001D6312 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,30 +50,30 @@
 		D364A99C1C2AAF59001D6312 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D364A99B1C2AAF59001D6312 /* BadgeViewExample.app */,
+				D364A99B1C2AAF59001D6312 /* BadgeNumberViewExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D364A99D1C2AAF59001D6312 /* BadgeViewExample */ = {
+		D364A99D1C2AAF59001D6312 /* BadgeNumberViewExample */ = {
 			isa = PBXGroup;
 			children = (
 				D364A99E1C2AAF59001D6312 /* AppDelegate.swift */,
 				D364A9BC1C2AB706001D6312 /* MessageCell.swift */,
 				D364A9A01C2AAF59001D6312 /* ExampleViewController.swift */,
-				D364A9A21C2AAF59001D6312 /* Main.storyboard */,
+				D364A9C41C2B8F20001D6312 /* Main.storyboard */,
 				D364A9A51C2AAF59001D6312 /* Assets.xcassets */,
 				D364A9AA1C2AAF59001D6312 /* Info.plist */,
 			);
-			path = BadgeViewExample;
+			path = BadgeNumberViewExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D364A99A1C2AAF59001D6312 /* BadgeViewExample */ = {
+		D364A99A1C2AAF59001D6312 /* BadgeNumberViewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D364A9AD1C2AAF59001D6312 /* Build configuration list for PBXNativeTarget "BadgeViewExample" */;
+			buildConfigurationList = D364A9AD1C2AAF59001D6312 /* Build configuration list for PBXNativeTarget "BadgeNumberViewExample" */;
 			buildPhases = (
 				D364A9971C2AAF59001D6312 /* Sources */,
 				D364A9981C2AAF59001D6312 /* Frameworks */,
@@ -83,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = BadgeViewExample;
+			name = BadgeNumberViewExample;
 			productName = BadgeViewExample;
-			productReference = D364A99B1C2AAF59001D6312 /* BadgeViewExample.app */;
+			productReference = D364A99B1C2AAF59001D6312 /* BadgeNumberViewExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D364A9961C2AAF59001D6312 /* Build configuration list for PBXProject "BadgeViewExample" */;
+			buildConfigurationList = D364A9961C2AAF59001D6312 /* Build configuration list for PBXProject "BadgeNumberViewExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D364A99A1C2AAF59001D6312 /* BadgeViewExample */,
+				D364A99A1C2AAF59001D6312 /* BadgeNumberViewExample */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D364A9A61C2AAF59001D6312 /* Assets.xcassets in Resources */,
-				D364A9A41C2AAF59001D6312 /* Main.storyboard in Resources */,
+				D364A9C61C2B8F20001D6312 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,10 +147,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D364A9A21C2AAF59001D6312 /* Main.storyboard */ = {
+		D364A9C41C2B8F20001D6312 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D364A9A31C2AAF59001D6312 /* Base */,
+				D364A9C51C2B8F20001D6312 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -246,10 +246,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = BadgeViewExample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BadgeNumberViewExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeViewExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeNumberViewExample;
+				PRODUCT_NAME = BadgeNumberViewExample;
 			};
 			name = Debug;
 		};
@@ -258,17 +258,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = BadgeViewExample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BadgeNumberViewExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeViewExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Teambition.BadgeNumberViewExample;
+				PRODUCT_NAME = BadgeNumberViewExample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D364A9961C2AAF59001D6312 /* Build configuration list for PBXProject "BadgeViewExample" */ = {
+		D364A9961C2AAF59001D6312 /* Build configuration list for PBXProject "BadgeNumberViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D364A9AB1C2AAF59001D6312 /* Debug */,
@@ -277,7 +277,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D364A9AD1C2AAF59001D6312 /* Build configuration list for PBXNativeTarget "BadgeViewExample" */ = {
+		D364A9AD1C2AAF59001D6312 /* Build configuration list for PBXNativeTarget "BadgeNumberViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D364A9AE1C2AAF59001D6312 /* Debug */,
