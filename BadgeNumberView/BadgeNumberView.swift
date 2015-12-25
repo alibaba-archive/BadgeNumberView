@@ -15,6 +15,7 @@ public class BadgeNumberView: UIView {
 
     private var badgeBackgroundColor: UIColor?
     private var badge: (text: String, font: UIFont, textColor: UIColor)?
+    private var size = CGSize(width: 0, height: 0)
 
     // MARK: - Configuration
     public func setBadge(text text: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor) {
@@ -30,14 +31,19 @@ public class BadgeNumberView: UIView {
 
         if autoSize {
             let badgeSize = sizeForBadge(text, font: font, textColor: textColor)
-            updateBadgeHeight(badgeSize.height)
-            updateBadgeWidth(badgeSize.width)
-            setNeedsDisplay()
+            if badgeSizeNeedUpdate(newSize: badgeSize) {
+                updateBadgeHeight(badgeSize.height)
+                updateBadgeWidth(badgeSize.width)
+                setNeedsDisplay()
+            }
         }
     }
 
     public func setBadgeSize(size: CGSize) {
         if autoSize {
+            return
+        }
+        if !badgeSizeNeedUpdate(newSize: size) {
             return
         }
 
@@ -53,6 +59,10 @@ public class BadgeNumberView: UIView {
             badgeBackground.fill()
             drawBadgeString(text: badge.text, font: badge.font, textColor: badge.textColor)
         }
+    }
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -106,6 +116,7 @@ public class BadgeNumberView: UIView {
             }
             layoutIfNeeded()
         }
+        size.height = height
     }
 
     private func updateBadgeWidth(width: CGFloat) {
@@ -121,6 +132,11 @@ public class BadgeNumberView: UIView {
             }
             layoutIfNeeded()
         }
+        size.width = width
+    }
+
+    private func badgeSizeNeedUpdate(newSize newSize: CGSize) -> Bool {
+        return size != newSize
     }
 
     // MARK: - Helper

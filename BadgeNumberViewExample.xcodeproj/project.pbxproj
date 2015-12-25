@@ -12,8 +12,8 @@
 		D364A9A61C2AAF59001D6312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364A9A51C2AAF59001D6312 /* Assets.xcassets */; };
 		D364A9BD1C2AB706001D6312 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364A9BC1C2AB706001D6312 /* MessageCell.swift */; };
 		D364A9C61C2B8F20001D6312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364A9C41C2B8F20001D6312 /* Main.storyboard */; };
-		D364A9CA1C2BF15D001D6312 /* BadgeNumberView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */; };
-		D364A9CB1C2BF15D001D6312 /* BadgeNumberView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3C9537C1C2D25A8009B36EE /* BadgeNumberView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C9537B1C2D25A8009B36EE /* BadgeNumberView.framework */; };
+		D3C9537D1C2D25A8009B36EE /* BadgeNumberView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3C9537B1C2D25A8009B36EE /* BadgeNumberView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D364A9CB1C2BF15D001D6312 /* BadgeNumberView.framework in Embed Frameworks */,
+				D3C9537D1C2D25A8009B36EE /* BadgeNumberView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		D364A9AA1C2AAF59001D6312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364A9BC1C2AB706001D6312 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		D364A9C51C2B8F20001D6312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BadgeNumberView.framework; path = "/Users/hongxin/Library/Developer/Xcode/DerivedData/BadgeNumberView-dgiqothgeazfncejznvevftuadqa/Build/Products/Debug-iphoneos/BadgeNumberView.framework"; sourceTree = "<absolute>"; };
+		D3C9537B1C2D25A8009B36EE /* BadgeNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BadgeNumberView.framework; path = "/Users/hongxin/Library/Developer/Xcode/DerivedData/BadgeNumberView-dgiqothgeazfncejznvevftuadqa/Build/Products/Debug-iphoneos/BadgeNumberView.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D364A9CA1C2BF15D001D6312 /* BadgeNumberView.framework in Frameworks */,
+				D3C9537C1C2D25A8009B36EE /* BadgeNumberView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		D364A9921C2AAF59001D6312 = {
 			isa = PBXGroup;
 			children = (
-				D364A9C91C2BF15D001D6312 /* BadgeNumberView.framework */,
+				D3C9537B1C2D25A8009B36EE /* BadgeNumberView.framework */,
 				D364A99D1C2AAF59001D6312 /* BadgeNumberViewExample */,
 				D364A99C1C2AAF59001D6312 /* Products */,
 			);
@@ -211,6 +211,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_MAP_FILE_PATH = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,6 +251,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_MAP_FILE_PATH = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

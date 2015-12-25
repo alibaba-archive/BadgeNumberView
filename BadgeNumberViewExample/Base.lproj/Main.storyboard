@@ -12,27 +12,45 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="65" sectionHeaderHeight="18" sectionFooterHeight="18" id="KlC-fT-l9N">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="65" id="NDN-Hf-YZf" customClass="MessageCell" customModule="BadgeNumberViewExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="65"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="60" id="NDN-Hf-YZf" customClass="MessageCell" customModule="BadgeNumberViewExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDN-Hf-YZf" id="QYV-7a-Szv">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-Rw-RAx" customClass="BadgeNumberView" customModule="BadgeNumberView">
-                                            <rect key="frame" x="555" y="19" width="25" height="25"/>
+                                            <rect key="frame" x="555" y="17" width="25" height="25"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="IBV-j4-8ro"/>
                                                 <constraint firstAttribute="height" constant="25" id="oZq-Nc-rgL"/>
                                             </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-rN-JKR">
+                                            <rect key="frame" x="20" y="12" width="560" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How about having dinner together?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pS-R1-mK3">
+                                            <rect key="frame" x="20" y="34" width="560" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Odg-rN-JKR" firstAttribute="leading" secondItem="QYV-7a-Szv" secondAttribute="leading" constant="20" id="5Vh-ww-OYH"/>
+                                        <constraint firstItem="Odg-rN-JKR" firstAttribute="top" secondItem="QYV-7a-Szv" secondAttribute="top" constant="12" id="BGG-qk-0oT"/>
+                                        <constraint firstItem="7pS-R1-mK3" firstAttribute="leading" secondItem="QYV-7a-Szv" secondAttribute="leading" constant="20" id="OE1-ir-hvv"/>
+                                        <constraint firstAttribute="trailing" secondItem="7pS-R1-mK3" secondAttribute="trailing" constant="20" id="PhX-E0-TGX"/>
                                         <constraint firstItem="zFM-Rw-RAx" firstAttribute="centerY" secondItem="QYV-7a-Szv" secondAttribute="centerY" id="TF2-6t-eLa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Odg-rN-JKR" secondAttribute="trailing" constant="20" id="c92-7G-sDf"/>
                                         <constraint firstAttribute="trailing" secondItem="zFM-Rw-RAx" secondAttribute="trailing" constant="20" id="r80-Qq-hbj"/>
+                                        <constraint firstItem="7pS-R1-mK3" firstAttribute="top" secondItem="Odg-rN-JKR" secondAttribute="bottom" constant="2" id="zpU-g8-SD1"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
