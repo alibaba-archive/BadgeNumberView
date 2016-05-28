@@ -19,16 +19,17 @@ public class BadgeNumberView: UIView {
 
     // MARK: - Configuration
     public func setBadge(text text: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor) {
+        let needUpdate = badge?.text != text || badge?.font != font
+        self.backgroundColor = UIColor.clearColor()
+        badgeBackgroundColor = backgroundColor
+        badge = (text, font, textColor)
+
         if hidesWhenZero && text == "0" {
             hidden = true
             return
         }
 
         hidden = false
-        self.backgroundColor = UIColor.clearColor()
-        badgeBackgroundColor = backgroundColor
-        badge = (text, font, textColor)
-
         if autoSize {
             let badgeSize = sizeForBadge(text, font: font, textColor: textColor)
             if badgeSizeNeedUpdate(newSize: badgeSize) {
@@ -36,6 +37,8 @@ public class BadgeNumberView: UIView {
                 updateBadgeWidth(badgeSize.width)
                 setNeedsDisplay()
             }
+        } else if needUpdate {
+            setNeedsDisplay()
         }
     }
 
