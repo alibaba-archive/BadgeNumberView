@@ -22,8 +22,8 @@ class MessageCell: UITableViewCell {
 //        badgeNumberView.autoSizeOffset = (3, 2)
     }
 
-    func fill(number number: Int) {
-        badgeNumberView.setBadge(text: String(number), font: UIFont.systemFontOfSize(13), textColor: UIColor.whiteColor(), backgroundColor: UIColor(red: 255 / 255, green: 59 / 255, blue: 48 / 255, alpha: 1))
-        badgeNumberView.setBadgeSize(CGSizeMake(18 + CGFloat((String(number).characters.count - 1) * 8), 18))
+    func fill(_ number: Int) {
+        badgeNumberView.setBadge(text: String(number), font: UIFont.systemFont(ofSize: 13), textColor: UIColor.white, backgroundColor: UIColor(red: 255 / 255, green: 59 / 255, blue: 48 / 255, alpha: 1))
+        badgeNumberView.setBadgeSize(CGSize(width: 18 + CGFloat((String(number).characters.count - 1) * 8), height: 18))
     }
 }

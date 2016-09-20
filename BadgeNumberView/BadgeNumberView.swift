@@ -8,31 +8,31 @@
 
 import UIKit
 
-public class BadgeNumberView: UIView {
-    public var hidesWhenZero = false
-    public var autoSize = true
-    public var autoSizeOffset: (width: CGFloat, height: CGFloat) = (0, 0)
+open class BadgeNumberView: UIView {
+    open var hidesWhenZero = false
+    open var autoSize = true
+    open var autoSizeOffset: (width: CGFloat, height: CGFloat) = (0, 0)
 
-    private var badgeBackgroundColor: UIColor?
-    private var badge: (text: String, font: UIFont, textColor: UIColor)?
-    private var size = CGSize(width: 0, height: 0)
+    fileprivate var badgeBackgroundColor: UIColor?
+    fileprivate var badge: (text: String, font: UIFont, textColor: UIColor)?
+    fileprivate var size = CGSize(width: 0, height: 0)
 
     // MARK: - Configuration
-    public func setBadge(text text: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor) {
+    open func setBadge(text: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor) {
         let needUpdate = badge?.text != text || badge?.font != font
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         badgeBackgroundColor = backgroundColor
         badge = (text, font, textColor)
 
         if hidesWhenZero && text == "0" {
-            hidden = true
+            isHidden = true
             return
         }
 
-        hidden = false
+        isHidden = false
         if autoSize {
             let badgeSize = sizeForBadge(text, font: font, textColor: textColor)
-            if badgeSizeNeedUpdate(newSize: badgeSize) {
+            if badgeSizeNeedUpdate(withSize: badgeSize) {
                 updateBadgeHeight(badgeSize.height)
                 updateBadgeWidth(badgeSize.width)
                 setNeedsDisplay()
@@ -42,11 +42,11 @@ public class BadgeNumberView: UIView {
         }
     }
 
-    public func setBadgeSize(size: CGSize) {
+    open func setBadgeSize(_ size: CGSize) {
         if autoSize {
             return
         }
-        if !badgeSizeNeedUpdate(newSize: size) {
+        if !badgeSizeNeedUpdate(withSize: size) {
             return
         }
 
@@ -55,8 +55,8 @@ public class BadgeNumberView: UIView {
         setNeedsDisplay()
     }
 
-    public override func drawRect(rect: CGRect) {
-        if let badgeBackgroundColor = badgeBackgroundColor, badge = badge {
+    open override func draw(_ rect: CGRect) {
+        if let badgeBackgroundColor = badgeBackgroundColor, let badge = badge {
             let badgeBackground = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.height / 2)
             badgeBackgroundColor.setFill()
             badgeBackground.fill()
@@ -73,7 +73,7 @@ public class BadgeNumberView: UIView {
     }
 
     // MARK: - Size related
-    private func sizeForBadge(text: String, font: UIFont, textColor: UIColor) -> CGSize {
+    fileprivate func sizeForBadge(_ text: String, font: UIFont, textColor: UIColor) -> CGSize {
         let fitHeight = ceil(font.lineHeight)
         let fitWidth = ceil(attributedBadgeString(text: text, font: font, textColor: textColor).size.width)
 
@@ -85,28 +85,28 @@ public class BadgeNumberView: UIView {
             let width = fitWidth + height / 2
             return ceil(width + autoSizeOffset.width)
         }()
-        return CGSizeMake(width, height)
+        return CGSize(width: width, height: height)
     }
 
-    private func heightConstraint() -> (available: Bool, constraint: NSLayoutConstraint?) {
+    fileprivate func heightConstraint() -> (available: Bool, constraint: NSLayoutConstraint?) {
         for constraint in constraints {
-            if constraint.firstAttribute == .Height {
+            if constraint.firstAttribute == .height {
                 return (true, constraint)
             }
         }
         return (false, nil)
     }
 
-    private func widthConstraint() -> (available: Bool, constraint: NSLayoutConstraint?) {
+    fileprivate func widthConstraint() -> (available: Bool, constraint: NSLayoutConstraint?) {
         for constraint in constraints {
-            if constraint.firstAttribute == .Width {
+            if constraint.firstAttribute == .width {
                 return (true, constraint)
             }
         }
         return (false, nil)
     }
 
-    private func updateBadgeHeight(height: CGFloat) {
+    fileprivate func updateBadgeHeight(_ height: CGFloat) {
         if translatesAutoresizingMaskIntoConstraints {
             // BadgeNumberView is programmatically created
             frame.size.height = height
@@ -115,14 +115,14 @@ public class BadgeNumberView: UIView {
             if let heightConstraint = heightConstraint().constraint {
                 heightConstraint.constant = height
             } else {
-                addConstraint(NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: .None, attribute: .NotAnAttribute, multiplier: 1, constant: height))
+                addConstraint(NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: height))
             }
             layoutIfNeeded()
         }
         size.height = height
     }
 
-    private func updateBadgeWidth(width: CGFloat) {
+    fileprivate func updateBadgeWidth(_ width: CGFloat) {
         if translatesAutoresizingMaskIntoConstraints {
             // BadgeNumberView is programmatically created
             frame.size.width = width
@@ -131,36 +131,36 @@ public class BadgeNumberView: UIView {
             if let widthConstraint = widthConstraint().constraint {
                 widthConstraint.constant = width
             } else {
-                addConstraint(NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: .None, attribute: .NotAnAttribute, multiplier: 1, constant: width))
+                addConstraint(NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: width))
             }
             layoutIfNeeded()
         }
         size.width = width
     }
 
-    private func badgeSizeNeedUpdate(newSize newSize: CGSize) -> Bool {
+    fileprivate func badgeSizeNeedUpdate(withSize newSize: CGSize) -> Bool {
         return size != newSize
     }
 
     // MARK: - Helper
-    private func attributedBadgeString(text text: String, font: UIFont, textColor: UIColor) -> (string: NSAttributedString, attributes: [String: AnyObject], size: CGSize) {
+    fileprivate func attributedBadgeString(text: String, font: UIFont, textColor: UIColor) -> (string: NSAttributedString, attributes: [String: Any], size: CGSize) {
         let attributes = [NSForegroundColorAttributeName: textColor, NSFontAttributeName: font]
         let attributedBadgeString = NSAttributedString(string: text, attributes: attributes)
-        let attributedBadgeStringFrame = attributedBadgeString.boundingRectWithSize(CGSizeMake(CGFloat.max, CGFloat.max), options: .UsesLineFragmentOrigin, context: nil)
+        let attributedBadgeStringFrame = attributedBadgeString.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
         return (attributedBadgeString, attributes, attributedBadgeStringFrame.size)
     }
 
-    private func drawBadgeString(text text: String, font: UIFont, textColor: UIColor) {
+    fileprivate func drawBadgeString(text: String, font: UIFont, textColor: UIColor) {
         let attributedBadge = attributedBadgeString(text: text, font: font, textColor: textColor)
         var attributes = attributedBadge.attributes
         let attributedBadgeSize = attributedBadge.size
 
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
+        paragraphStyle.alignment = .center
         attributes.updateValue(paragraphStyle, forKey: NSParagraphStyleAttributeName)
         let baselineOffset = -(bounds.height - attributedBadgeSize.height) / 2
         attributes.updateValue(baselineOffset, forKey: NSBaselineOffsetAttributeName)
         let finalAttributedBadgeNumber = NSAttributedString(string: text, attributes: attributes)
-        finalAttributedBadgeNumber.drawInRect(bounds)
+        finalAttributedBadgeNumber.draw(in: bounds)
     }
 }

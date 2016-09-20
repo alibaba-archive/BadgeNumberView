@@ -5,7 +5,7 @@ BadgeNumberView is a quite lightweight badge view for iOS applications.
 
 ##How To Get Started
 ###Carthage
-Specify "BadgeNumberView" in your Cartfile:
+Specify "BadgeNumberView" in your ```Cartfile```:
 ```ogdl 
 github "teambition/BadgeNumberView"
 ```
@@ -14,13 +14,13 @@ github "teambition/BadgeNumberView"
 #####  Auto Sizing (Default)
 ```swift
 badgeNumberView.autoSizeOffset = (3, 2)
-badgeNumberView.setBadge(text: "23", font: UIFont.systemFontOfSize(13), textColor: UIColor.whiteColor(), backgroundColor: UIColor.redColor())
+badgeNumberView.setBadge(text: "23", font: UIFont.systemFont(ofSize: 13), textColor: UIColor.white, backgroundColor: UIColor.red)
 ```
 
 ##### Custom Sizing
 ```swift
 badgeNumberView.autoSize = false
-badgeNumberView.setBadge(text: "7", font: UIFont.systemFontOfSize(13), textColor: UIColor.whiteColor(), backgroundColor: UIColor.redColor())
+badgeNumberView.setBadge(text: "7", font: UIFont.systemFont(ofSize: 13), textColor: UIColor.white, backgroundColor: UIColor.red)
 badgeNumberView.setBadgeSize(CGSize(width: 18, height: 18))
 ```
 
