@@ -143,8 +143,8 @@ open class BadgeNumberView: UIView {
     }
 
     // MARK: - Helper
-    fileprivate func attributedBadgeString(text: String, font: UIFont, textColor: UIColor) -> (string: NSAttributedString, attributes: [String: Any], size: CGSize) {
-        let attributes = [NSForegroundColorAttributeName: textColor, NSFontAttributeName: font]
+    fileprivate func attributedBadgeString(text: String, font: UIFont, textColor: UIColor) -> (string: NSAttributedString, attributes: [NSAttributedStringKey: Any], size: CGSize) {
+        let attributes: [NSAttributedStringKey: Any] = [.foregroundColor: textColor, .font: font]
         let attributedBadgeString = NSAttributedString(string: text, attributes: attributes)
         let attributedBadgeStringFrame = attributedBadgeString.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
         return (attributedBadgeString, attributes, attributedBadgeStringFrame.size)
@@ -157,9 +157,9 @@ open class BadgeNumberView: UIView {
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
-        attributes.updateValue(paragraphStyle, forKey: NSParagraphStyleAttributeName)
+        attributes.updateValue(paragraphStyle, forKey: NSAttributedStringKey.paragraphStyle)
         let baselineOffset = -(bounds.height - attributedBadgeSize.height) / 2
-        attributes.updateValue(baselineOffset, forKey: NSBaselineOffsetAttributeName)
+        attributes.updateValue(baselineOffset, forKey: NSAttributedStringKey.baselineOffset)
         let finalAttributedBadgeNumber = NSAttributedString(string: text, attributes: attributes)
         finalAttributedBadgeNumber.draw(in: bounds)
     }
