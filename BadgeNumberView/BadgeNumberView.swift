@@ -79,7 +79,7 @@ open class BadgeNumberView: UIView {
 
         let height = ceil(fitHeight + autoSizeOffset.height)
         let width: CGFloat = {
-            if text.characters.count <= 1 {
+            if text.count <= 1 {
                 return height
             }
             let width = fitWidth + height / 2
