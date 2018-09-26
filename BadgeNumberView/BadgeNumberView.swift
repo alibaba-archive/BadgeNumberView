@@ -20,7 +20,7 @@ open class BadgeNumberView: UIView {
     // MARK: - Configuration
     open func setBadge(text: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor) {
         let needUpdate = badge?.text != text || badge?.font != font
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = .clear
         badgeBackgroundColor = backgroundColor
         badge = (text, font, textColor)
 
@@ -143,8 +143,8 @@ open class BadgeNumberView: UIView {
     }
 
     // MARK: - Helper
-    fileprivate func attributedBadgeString(text: String, font: UIFont, textColor: UIColor) -> (string: NSAttributedString, attributes: [NSAttributedStringKey: Any], size: CGSize) {
-        let attributes: [NSAttributedStringKey: Any] = [.foregroundColor: textColor, .font: font]
+    fileprivate func attributedBadgeString(text: String, font: UIFont, textColor: UIColor) -> (string: NSAttributedString, attributes: [NSAttributedString.Key: Any], size: CGSize) {
+        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: textColor, .font: font]
         let attributedBadgeString = NSAttributedString(string: text, attributes: attributes)
         let attributedBadgeStringFrame = attributedBadgeString.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
         return (attributedBadgeString, attributes, attributedBadgeStringFrame.size)
@@ -157,9 +157,9 @@ open class BadgeNumberView: UIView {
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
-        attributes.updateValue(paragraphStyle, forKey: NSAttributedStringKey.paragraphStyle)
+        attributes.updateValue(paragraphStyle, forKey: .paragraphStyle)
         let baselineOffset = -(bounds.height - attributedBadgeSize.height) / 2
-        attributes.updateValue(baselineOffset, forKey: NSAttributedStringKey.baselineOffset)
+        attributes.updateValue(baselineOffset, forKey: .baselineOffset)
         let finalAttributedBadgeNumber = NSAttributedString(string: text, attributes: attributes)
         finalAttributedBadgeNumber.draw(in: bounds)
     }

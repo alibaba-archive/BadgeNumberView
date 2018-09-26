@@ -37,7 +37,7 @@ class ExampleViewController: UITableViewController {
         titleLabel.text = "Unread Messages"
         let badgeView = BadgeNumberView(frame: CGRect(x: 170, y: (45 - 18) / 2, width: 20, height: 20))
         let badge = badgeForHeaderView(section)
-        badgeView.setBadge(text: badge.text, font: UIFont.systemFont(ofSize: 13), textColor: UIColor.white, backgroundColor: UIColor.blue)
+        badgeView.setBadge(text: badge.text, font: .systemFont(ofSize: 13), textColor: .white, backgroundColor: .blue)
         headerView.addSubview(titleLabel)
         headerView.addSubview(badgeView)
         badgeView.autoSize = false

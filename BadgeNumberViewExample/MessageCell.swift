@@ -23,7 +23,7 @@ class MessageCell: UITableViewCell {
     }
 
     func fill(_ number: Int) {
-        badgeNumberView.setBadge(text: String(number), font: UIFont.systemFont(ofSize: 13), textColor: UIColor.white, backgroundColor: UIColor(red: 255 / 255, green: 59 / 255, blue: 48 / 255, alpha: 1))
+        badgeNumberView.setBadge(text: String(number), font: .systemFont(ofSize: 13), textColor: .white, backgroundColor: UIColor(red: 255 / 255, green: 59 / 255, blue: 48 / 255, alpha: 1))
         badgeNumberView.setBadgeSize(CGSize(width: 18 + CGFloat((String(number).count - 1) * 8), height: 18))
     }
 }
